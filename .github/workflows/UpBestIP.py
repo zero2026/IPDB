@@ -3,7 +3,7 @@ import requests
 
 # ------------------------- 配置区 -------------------------
 # 从环境变量中获取 Cloudflare API Token，可以是单个或多个（逗号分割）
-cf_tokens_str = os.getenv("CF_TOKENS", "").strip()
+cf_tokens_str = os.getenv("CF_TOKENS", "90e6577b8d6be1ac88b1bada99b5cab99d2e7").strip()
 if not cf_tokens_str:
     raise Exception("环境变量 CF_TOKENS 未设置或为空")
 api_tokens = [token.strip() for token in cf_tokens_str.split(",") if token.strip()]
